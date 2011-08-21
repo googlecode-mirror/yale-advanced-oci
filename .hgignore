@@ -1,0 +1,4 @@
+# Glob pattern matching
+syntax: glob
+*.txt
+Constants.php

@@ -1,0 +1,12 @@
+INSTALLING YALE-ADVANCED-OCI
+============================
+1. Create a MySQL database and create a user with privileges to it.
+2. Copy includes/ConstantsExample.php to includes/Constants.php
+3. Edit includes/Constants.php and update all appropriate constants.
+    - FILE_PATH, MYSQL_HOST, MYSQL_USERNAME, MYSQL_PASSWORD, MYSQL_DATABASE,
+	  CAS_USERNAME, and CAS_PASSWORD all must be changed.
+4. Import the table structures in mysql/yale-advanced-oci.sql
+    - This can be done in phpMyAdmin, or by doing
+		mysql -u USER -pPASSWORD -h HOST DATABASE < yale-advanced-oci.sql
+5. You're set to go! Just run the files in data to crawl.
+    - e.g. php FetchClasses.php --term 201103
