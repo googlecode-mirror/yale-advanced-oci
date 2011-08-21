@@ -228,8 +228,7 @@ if (!empty($startSubject)) {
 if (!is_dir(TEMP_PATH . '/FetchRatings')) {
 	mkdir(TEMP_PATH . '/FetchRatings', 0755, true);
 }
-//var_dump($curl->setCookieFile(TEMP_PATH . "/FetchRatings/{$cookieFileName}.txt"));
-//echo TEMP_PATH . "/FetchRatings/{$cookieFileName}.txt\n";
+$curl->setCookieFile(TEMP_PATH . "/FetchRatings/{$cookieFileName}.txt");
 $curl->setAutoLoginParameters(CAS_USERNAME, CAS_PASSWORD);
 
 $mysqli = ProjectFunctions::createMysqli();
